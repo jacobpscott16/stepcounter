@@ -21,7 +21,7 @@ export default function App() {
       <Text>Hello!  I am Jake!</Text>
 
 
-      <View style={{flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row', gap: 25}}>
 
         <Value label="Steps" value="1219" />
         <Value label="Distance" value="0.75 km" />
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     padding: 12, 
   },
   valueContainer: {
-    marginRight: 50,
     marginVertical: 10,
   },
   label: {
