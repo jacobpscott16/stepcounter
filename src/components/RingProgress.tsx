@@ -30,7 +30,7 @@ const RingProgress = ({
     const fill = useSharedValue(0);
 
     useEffect(() => {
-        fill.value = withTiming(progress, { duration: 1500 });
+        fill.value = withTiming(progress, { duration: 2500 });
     }, [progress]);
 
     const animatedProps = useAnimatedProps(() => ({
