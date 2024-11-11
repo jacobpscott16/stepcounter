@@ -61,7 +61,7 @@ const useHealthData = (date: Date) => {
         console.log(results.value);
         setDistance(results.value);
       });
-    }, [hasPermissions]);
+    }, [hasPermissions, date]);
 
     return {
         steps,

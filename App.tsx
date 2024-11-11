@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Value from './src/components/Value'
 import RingProgress from './src/components/RingProgress';
+import { useState } from 'react';
 import useHealthData from './src/Hooks/useHealthData';
 
 const STEPS_GOAL = 10_000;
@@ -14,7 +15,7 @@ export default function App() {
       <RingProgress radius={125} strokeWidth={50} progress={steps / STEPS_GOAL} />
 
       <View style={styles.values}>
-        <Value label="Steps" value={steps.toString()} />
+        <Value label="Steps" value={Math.round(steps).toLocaleString()} />
         <Value label="Distance" value={`${(distance / 1000).toFixed(2)} km`} />
         <Value label="Flights Climbed" value={flights.toString()} />
 

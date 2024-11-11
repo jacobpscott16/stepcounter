@@ -50,7 +50,12 @@ const RingProgress = ({
     };
 
     return (
-        <View style={{ width: radius * 2, height: radius * 2, alignSelf: 'center' }}>
+        <View
+            style={{
+                width: radius * 2,
+                height: radius * 2,
+                alignSelf: 'center'
+            }}>
             <SVG>
                 {/* Background */}
                 <Circle
@@ -63,11 +68,11 @@ const RingProgress = ({
 
                 />
             </SVG>
-            <AntDesign 
-            name="arrowright" 
-            size={strokeWidth * 0.8} 
-            color="black"
-            style={{ position: 'absolute', alignSelf: 'center', top: strokeWidth * 0.1}} />
+            <AntDesign
+                name="arrowright"
+                size={strokeWidth * 0.8}
+                color="black"
+                style={{ position: 'absolute', alignSelf: 'center', top: strokeWidth * 0.1 }} />
         </View>
     );
 };
